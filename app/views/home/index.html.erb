@@ -1,0 +1,19 @@
+<h1>Home#index</h1>
+<p><%= @brand %></p>
+
+<div class= "tweet-wrapper">
+  <% @tweets.each do |tweet| %>
+    <p class= "tweet">
+    <span>
+    <%= tweet.message %>
+    </span>
+    <br>
+
+
+
+    <%= tweet.created_at.strftime("%A %I:%M%p %d-%B-%Y") %>
+    <!-- here change's the time format to more human readable! -->
+    <!-- check out this website: https://apidock.com/ruby/DateTime/strftime -->
+    </p>
+    <% end%>
+</div>
